@@ -1,0 +1,164 @@
+@charset "UTF-8";
+
+:root{ /*melhor para o controle de cores*/
+    --cor0: rgb(63, 179, 108);
+    --cor1: rgb(5, 10, 47);
+    --cor2: rgb(34, 38, 96);
+    --cor3: rgb(97, 187, 130);
+    --cor4: rgb(111, 118, 36);
+    --cor5: rgb(162, 201, 127);
+    --cor6: rgb(240, 234, 234);
+}
+
+*{
+    font-family: 'Segoe UI', 'Open Sans', 'Helvetica Neue', sans-serif; 
+}
+a.externo::after{
+    content: '\00A0\1F517';
+}
+
+#logo{
+    background-color: var(--cor1);
+    text-align: right;
+    border-bottom-left-radius: 3em;
+    width: 4em;
+    color: var(--cor6);
+    margin-bottom: 0;
+    float: right;
+}
+
+img{
+    width: 100%;
+}
+
+body{/*definido em root as cores ficam melhores */
+    background-color: var(--cor6);
+    margin: 0;
+}
+
+header{
+    background-image: linear-gradient(var(--cor5),var(--cor0));
+    text-align: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: 0px 0px 10px black;
+    margin-bottom: 1.6em;
+}
+nav{
+    background-color: var(--cor3);
+    border-radius: 0px 0px 10px 10px;
+    margin-top: 1em;
+}
+nav>a{
+    text-decoration: none;
+    padding-left: 2.5em;
+    padding-right: 2.5em;
+}
+nav>a:hover{
+    transition-duration: 0.3s;
+    background-color: rgb(136, 222, 168);
+    border-radius: 10px;
+}
+header h1,p{
+    margin-top: 0;
+    max-width: 50em;
+    padding-right: 1em;
+    padding-left: 1em;
+    display: block;
+    margin: auto;
+
+}
+
+
+main{
+    background-color: white;
+    margin: auto;
+    flex: 5em;
+    max-width: 750px;
+    min-width: 300px;
+    padding: 20px 10px 0px 10px;
+    box-shadow: 0px 0px 10px black;
+    border-radius: 5px;
+    line-height: 1.3em;
+}
+main strong{
+    color: var(--cor3);
+    background-color: rgb(234, 241, 246);
+    font-weight:bold;
+    padding: 0px 4px;
+}
+main>section>article>p{
+    text-indent: 30px;
+}
+main h2{
+    background-image: linear-gradient(to right, var(--cor5), transparent);
+}
+main aside{
+    margin-top: 5px;
+    margin-bottom: 3px;
+}
+main>section{
+    border-bottom: 5em;
+    border-bottom-color: var(--cor2);
+}
+main source.pequena{
+    max-width: 35px;
+    display: block;
+    margin: auto;
+}
+
+a:hover{
+    color: rgb(235, 104, 104);
+}
+
+#bola{
+    width: 5em;
+    height: 5em;
+    background-color: brown;
+    border-radius: 50%;
+}
+
+ul{ /*aumenta o tamanho de acordo com a quantia de elementos, maegin pode ser negativa pra crescer*/
+    background-color: aliceblue;
+    margin: auto;
+    margin-top: 1em;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.589);
+    list-style-position: inside;
+    columns: 2;
+    max-width: 20em;
+}
+
+div.videos{
+    margin-top: 10px;
+    margin-left: -10px;
+    margin-right: -10px;
+    border-radius: 10px;
+    padding-bottom: 50%; /*isso aqui muda o preto quando o video ta rodando*/
+    position: relative;
+}
+div.videos>iframe{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+footer{
+    text-align: center;
+    background-color: rgb(22, 21, 21);
+    color: whitesmoke;
+    padding: 3px;
+    bottom: 0;
+    right: 0;
+    /* ou padding: 3px; para preencher*/
+
+    /*position:absolute; cria uma tag muito boa no canto da janela do site
+    bottom: 0;
+    right:0;*/
+}
+footer>p{
+    margin: 0;
+    display: block;
+    margin: auto;
+}
