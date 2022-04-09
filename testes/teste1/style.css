@@ -16,6 +16,9 @@
 a.externo::after{
     content: '\00A0\1F517';
 }
+a.externo{
+    text-decoration: none;
+}
 
 #logo{
     background-color: var(--cor1);
@@ -80,6 +83,7 @@ main{
     box-shadow: 0px 0px 10px black;
     border-radius: 5px;
     line-height: 1.3em;
+    border-bottom-left-radius: 10px; border-bottom-right-radius: 10px;
 }
 main strong{
     color: var(--cor3);
