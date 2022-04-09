@@ -1,0 +1,58 @@
+@charset "UTF-8";
+
+body{
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fbackgroundlabs.com%2Fwp-content%2Fuploads%2F2013%2F03%2Fcardboard-seamless-texture.jpg&f=1&nofb=1');
+    
+}
+
+div.quadrado{
+    /*esse tipo de display é bacana vvv*/
+    display: inline-block;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: lightgray;
+    margin: 2px;
+    width: 180px;
+    height: 180px;
+}
+div#q1{
+    background-color: skyblue;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fonepiece%2Fimages%2F2%2F2b%2FBellamy%27s_Crossed_Out_Jolly_Roger.png%2Frevision%2Flatest%2Fscale-to-width-down%2F124%3Fcb%3D20140916083632&f=1&nofb=1');
+    background-size: 50px;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+div#q2{
+    background-image: linear-gradient(to bottom, white, blue);
+}
+div#q3{
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F18%2F5e%2Fd9%2F185ed9fb4bfb19c19151005716013290.jpg&f=1&nofb=1');
+}
+div#rep{
+    /*outros comandos úteis vvv*/
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fvignette.wikia.nocookie.net%2Fonepiece%2Fimages%2F2%2F2b%2FBellamy%27s_Crossed_Out_Jolly_Roger.png%2Frevision%2Flatest%2Fscale-to-width-down%2F124%3Fcb%3D20140916083632&f=1&nofb=1');
+    background-size: 50px;
+    background-repeat: repeat-x;
+}
+
+div.bloco{
+    height: 110px;
+    max-width: 47em;
+    border: 2px solid black;
+    border-radius: 10px;
+    margin: 5px;
+    background-image: url('https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.pinimg.com%2Foriginals%2F6f%2F38%2F04%2F6f3804e31bf472b264f2bb0b25e145b5.jpg&f=1&nofb=1');
+    color: whitesmoke;
+}
+div#b1{
+    background-position: left top;
+}
+div#b2{
+    background-position: center center;
+}
+div#b3{
+    background-position: right bottom;
+}
+div#b4{
+    background-position: left center;
+}
