@@ -1,2 +1,2 @@
-# sites
- repositório para testes em html css e javascript
+# desenvolvimento web
+ repositório para guardadar atividades feitas ou outros projetos de desenvolvimento web
