@@ -1,0 +1,61 @@
+@model mvc.Models.SessaoModel
+
+@{
+    ViewData["Title"] = "Excluir";
+}
+
+<h1>Excluir Sessão</h1>
+
+<div>
+    <hr />
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.evento)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.evento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.local)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.local)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.data)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.data)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hr_inicio)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hr_inicio)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.hr_fim)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.hr_fim)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.preco)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.preco)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.assentos)
+        </dt>
+        <dd class = "col-sm-10">
+            @Html.DisplayFor(model => model.assentos)
+        </dd>
+    </dl>
+    
+     <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Excluir" class="btn btn-danger" /> |
+        <a asp-action="Index">Voltar</a>
+    </form>
+</div>

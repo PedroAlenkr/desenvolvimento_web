@@ -1,0 +1,75 @@
+@model mvc.Models.ComprasModel
+
+@{
+    ViewData["Title"] = "confirma";
+}
+
+<h2>Dados da compra</h2>
+
+<dl class="row">
+        <dt class = "col-sm-2">
+            nº de Protocolo      
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.Id)
+        </dd>
+</dl>
+<hr>
+<div>
+    <dl class="row">
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.evento)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.evento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.ingressos)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.ingressos)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dt_compra)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.dt_compra)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.dt_evento)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.dt_evento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.cpf)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.cpf)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.pagamento)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.pagamento)
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.parcelas)
+        </dt>
+        <dd class = "col-sm-2">
+            @Html.DisplayFor(model => model.parcelas) vezes de R$ @ViewBag.parcelas
+        </dd>
+        <dt class = "col-sm-2">
+            @Html.DisplayNameFor(model => model.preco_total)
+        </dt>
+        <dd class = "col-sm-2">
+            R$
+            @Html.DisplayFor(model => model.preco_total)
+        </dd>
+    </dl>
+</div>
+<hr>
+<div>
+    <br><a asp-action="Index" asp-controller="Sessao" class="btn btn-dark">voltar</a> |
+    <button class="btn btn-light">imprimir</button>
+</div>

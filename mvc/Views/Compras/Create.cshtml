@@ -1,0 +1,95 @@
+@model mvc.Models.ComprasModel
+
+@{
+    ViewData["Title"] = "Comprar";
+}
+
+<h1>Comprar</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-2">
+        <dl>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.evento)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(Model => Model.evento)
+            </dd>
+        </dl>
+    </div>
+    <div class="col-md-2">
+        <dl>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.dt_compra)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(Model => Model.dt_compra)
+            </dd>
+        </dl>
+    </div>
+    <div class="col-md-2">
+        <dl>
+            <dt class = "col-sm-2">
+                @Html.DisplayNameFor(model => model.dt_evento)
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(Model => Model.dt_evento)
+            </dd>
+        </dl>
+    </div>
+    <div class="col-md-2">
+        <dl>
+            <dt class = "col-sm-10">
+                @Html.DisplayNameFor(model => model.cpf) comprador
+            </dt>
+            <dd class = "col-sm-10">
+                @Html.DisplayFor(Model => Model.cpf)
+            </dd>
+        </dl>
+    </div>
+</div>
+
+<hr />
+<div class="row">
+    <div class="col-md-3">
+        <form asp-action="Confirma" style="text-align: center;" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <input type="hidden" asp-for="evento" class="form-control" value="@Model.evento"/>
+                <input type="hidden" asp-for="dt_compra" class="form-control" value="@Model.dt_compra"/>
+                <input type="hidden" asp-for="dt_evento" class="form-control" value="@Model.dt_evento"/>
+                <input type="hidden" asp-for="cpf" class="form-control" value="@Model.cpf"/>
+                <input type="hidden" asp-for="id_sessao" class="form-control" value="@Model.id_sessao"/>
+            </div>
+            <div class="form-group">
+                <label asp-for="ingressos" class="control-label">quantia de ingressos</label>
+                <input type="number"asp-for="ingressos" class="form-control" min="1"/><!--style="text-align: center;" pra deixar dentro tbm no meio-->
+                <span asp-validation-for="ingressos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="pagamento" class="control-label">forma de pagamento</label>
+                <select  asp-for="pagamento" class="form-control">
+                        <option value="Cartao">Cartão</option>
+                        <option value="Pix">Pix</option>
+                        <option value="Boleto">Boleto</option>
+                </select>
+                <span asp-validation-for="pagamento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="parcelas" class="control-label">parcelamento</label>
+                <select  asp-for="parcelas" class="form-control">
+                        <option value="1">1 vez</option>
+                        <option value="2">2 vezes</option>
+                        <option value="3">3 vezes</option>
+                </select>
+                <span asp-validation-for="parcelas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br><input type="submit" value="Confirmar" class="btn btn-success" /> | 
+                <a asp-controller="Sessao" asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>
+

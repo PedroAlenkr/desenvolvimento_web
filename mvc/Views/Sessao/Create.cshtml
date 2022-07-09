@@ -1,0 +1,55 @@
+@model mvc.Models.SessaoModel
+
+@{
+    ViewData["Title"] = "Criar";
+}
+
+<h1>Criar Sessão</h1>
+
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="evento" class="control-label"></label>
+                <input asp-for="evento" class="form-control" />
+                <span asp-validation-for="evento" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="local" class="control-label"></label>
+                <input asp-for="local" class="form-control" />
+                <span asp-validation-for="local" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="data" class="control-label"></label>
+                <input type="date" asp-for="data" class="form-control" id="data"/>
+                <span asp-validation-for="data" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hr_inicio" class="control-label"></label>
+                <input type="time" asp-for="hr_inicio" class="form-control" />
+                <span asp-validation-for="hr_inicio" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="hr_fim" class="control-label"></label>
+                <input type="time" asp-for="hr_fim" class="form-control" />
+                <span asp-validation-for="hr_fim" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="preco" class="control-label"></label>
+                <input type="number" asp-for="preco" class="form-control" min="0" />
+                <span asp-validation-for="preco" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="assentos" class="control-label"></label>
+                <input type="number" asp-for="assentos" class="form-control" min="1"/>
+                <span asp-validation-for="assentos" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <br><input type="submit" value="Salvar" class="btn btn-success" /> |
+                <a asp-action="Index">Voltar</a>
+            </div>
+        </form>
+    </div>
+</div>

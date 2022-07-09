@@ -1,0 +1,83 @@
+@model IEnumerable<mvc.Models.UserModel>
+
+@{
+    ViewData["Title"] = "Usuários";
+}
+
+<div class="row">
+    <div class="col-md-10">
+        <h1>Usuários</h1>
+        <p><a asp-action="Create">Criar novo</a></p>
+    </div>
+    <div class="col-md-2">
+        <form method="post" style="text-align: center;">
+            <h5><strong>Buscar Usuário</strong></h5>
+            <div class="form-group">
+                <label  for="Nome" class="control-label">nome</label>
+               <input type="text" id="Nome" name="Nome" class="form-control" />
+            </div>
+            <div class="form-group">
+                <label  for="Tipo" class="control-label">tipo</label>
+                <div>
+                    <select  id="Tipo" name="Tipo">
+                        <option value=""></option>
+                        <option value="Admin">Admin</option>
+                        <option value="Usuario">Usuario</option>
+                    </select>
+                </div>
+            </div>
+            <div class="button">
+                <br><button type="submit" class="btn btn-primary"> buscar</button>
+            </div>
+        </form>
+    </div>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.nome)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.email)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.nascimento)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.sexo)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.tipo)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.nome)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.email)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.nascimento)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.sexo)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.tipo)
+            </td>
+            <td style="text-align: right;" class="side-bar">
+                <a asp-action="Edit" asp-route-id="@item.Id">Editar</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Detalhes</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Excluir</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
